@@ -1,0 +1,13 @@
+<!-- /templates/index.html: -->
+{% extends "base.html" %}
+
+{% block title %}Inicio{% endblock %}
+
+{% block content %}
+    <h1>Bienvenido al Portal de FastAPI-Project-Template</h1>
+    <p>Este es un portal para desarrollar tus proyectos con una base sólida.</p>
+    <p>Static URL: {{ url_for('static', path='/img/logos/Meta_logo_icono.png') }}</p>
+
+    {% endblock %}
+
+/FastAPI-Project-Template/static/img/logos/Meta_logo_icono.png

@@ -1,0 +1,22 @@
+# /docker/traefik/Dockerfile
+
+FROM traefik:v2.4
+
+# Instala OpenSSL para la generación de certificados
+RUN apk add --no-cache openssl
+
+# Crea la carpeta /certs explícitamente y cambia a ella como directorio de trabajo
+RUN mkdir -p /certs
+
+# Genera los certificados y los almacena en /certs
+RUN openssl req -x509 -nodes -days 365 -newkey rsa:2048 \
+    -keyout /certs/localhost-key.pem -out /certs/localhost.pem \
+    -subj "/C=US/ST=Denial/L=Springfield/O=Dis/CN=localhost"
+
+# Lista el contenido de /certs para depuración
+RUN ls -la
+
+# Copia el archivo de configuración de Traefik al directorio de configuración del contenedor
+COPY traefik.yml /etc/traefik/traefik.yml
+
+

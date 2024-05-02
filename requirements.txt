@@ -1,0 +1,22 @@
+# Servidores y herramientas de despliegue
+gunicorn==21.2.0  # Despliegue de aplicaciones FastAPI en entornos de producción
+uvicorn  # Servidor ASGI para desarrollo y producción, compatible con FastAPI
+
+# Cliente HTTP
+httpx  # Cliente HTTP asíncrono para realizar solicitudes HTTP dentro de FastAPI
+
+# Autenticación y seguridad
+msal  # Microsoft Authentication Library para integrar la autenticación de Azure AD
+itsdangerous  # Utilizado para la seguridad de datos, como la creación de tokens seguros
+
+# Validación y gestión de modelos de datos
+pydantic  # Biblioteca para la validación de datos y la gestión de entornos mediante modelos de datos
+
+# Configuración y manejo de entornos
+python-dotenv  # Carga de variables de entorno desde un archivo .env para configuraciones
+
+# Frameworks y librerías ASGI
+starlette==0.36.3  # Framework web ligero ASGI que es la base sobre la cual se construye FastAPI
+fastapi==0.110.0  # Framework web moderno y rápido para construir APIs con Python 3.7+
+
+jinja2  # Motor de plantillas para Python

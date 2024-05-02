@@ -1,0 +1,18 @@
+# Directorio de entorno virtual
+venv/
+
+# Caché de compilación de Python
+__pycache__/
+
+# Archivos de variables de entorno
+.env
+# Asegurar que .env.example no sea ignorado
+!.env.example
+
+# Ignorar todo dentro de logs/ y tmp/, excepto .gitkeep
+logs/*
+!logs/.gitkeep
+tmp/*
+!tmp/.gitkeep
+certs/*
+!certs/.gitkeep

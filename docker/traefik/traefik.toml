@@ -1,0 +1,29 @@
+# /docker/traefik/traefik.toml:
+
+[global]
+  checkNewVersion = true
+  sendAnonymousUsage = false
+
+[log]
+  level = "INFO"
+
+[api]
+  dashboard = true
+
+[entryPoints]
+  [entryPoints.web]
+    address = ":80"
+  [entryPoints.websecure]
+    address = ":443"
+
+[providers.docker]
+  exposedByDefault = false
+
+[certificatesResolvers.myresolver.acme]
+  email = "your_email@example.com"
+  storage = "acme.json"
+  [certificatesResolvers.myresolver.acme.httpChallenge]
+    entryPoint = "web"
+
+[ping]
+  entryPoint = "web"

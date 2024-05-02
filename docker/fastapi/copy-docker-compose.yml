@@ -1,0 +1,11 @@
+# docker-compose.yml
+
+version: '3.7'
+
+services:
+  fastapi_app:
+    build:
+      context: .
+      dockerfile: ./docker/fastapi/Dockerfile
+    ports:
+      - "5555:5555"
