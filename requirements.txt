@@ -20,3 +20,9 @@ starlette==0.36.3  # Framework web ligero ASGI que es la base sobre la cual se c
 fastapi==0.110.0  # Framework web moderno y rápido para construir APIs con Python 3.7+
 
 jinja2  # Motor de plantillas para Python
+
+# API de OpenAI para integrar GPT en aplicaciones
+openai
+
+# Biblioteca para manejo de archivos multipart en FastAPI
+python-multipart
