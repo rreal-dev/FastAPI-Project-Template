@@ -2,17 +2,18 @@
 
 ## Descripción
 
-Este repositorio sirve como una plantilla genérica para iniciar rápidamente proyectos basados en FastAPI. Está diseñado para ser flexible, fácil de personalizar y adecuado para una amplia gama de aplicaciones web y APIs. La plantilla incluye configuración básica, ejemplos de modelos, esquemas, y autenticación, así como una estructura de proyecto recomendada.
+Este repositorio sirve como una plantilla robusta y escalable para iniciar proyectos basados en FastAPI, ideal para desarrollo rápido de APIs y aplicaciones web. Con una estructura modular que incluye autenticación avanzada y ejemplos de integración con sistemas externos, esta plantilla está diseñada para facilitar la extensibilidad y mantenimiento.
 
 ## Características
 
-- **FastAPI:** Uso del moderno y rápido framework FastAPI.
-- **Autenticación:** Ejemplo de implementación de autenticación.
+- **FastAPI:** Utiliza el moderno y rápido framework FastAPI.
+- **Modularidad:** Estructura modular para autenticación, interacción con OpenAI, y más.
+- **Autenticación:** Implementación avanzada de autenticación usando MS Azure AD.
 - **Docker:** Plantilla de Docker y docker-compose para desarrollo y producción.
-- **CORS:** Configuración básica de CORS para mayor seguridad.
-- **Logger:** Configuración de un sistema de logging básico.
-- **Variables de Entorno:** Uso de variables de entorno para configuraciones.
-- **Dependencias:** `requirements.txt` para la gestión de dependencias.
+- **CORS:** Configuración avanzada de CORS integrada para seguridad mejorada.
+- **Logger:** Configuración avanzada de registro de actividades.
+- **Variables de Entorno:** Gestión segura de configuraciones a través de variables de entorno.
+- **Gestión de Archivos:** Soporte para subida y gestión de archivos con integración de OpenAI.
 
 ## Cómo empezar
 
@@ -27,7 +28,7 @@ Este repositorio sirve como una plantilla genérica para iniciar rápidamente pr
 1. **Clona el repositorio**
 
 ```bash
-git clone https://github.com/yourusername/FastAPI-Project-Template.git
+git clone https://github.com/rreal-dev/FastAPI-Project-Template.git
 cd FastAPI-Project-Template
 ```
 
@@ -63,21 +64,23 @@ docker-compose up --build
 
 ## Estructura del Proyecto
 
-Descripción de la estructura principal del proyecto:
+Esta sección detalla la estructura principal del proyecto, explicando el propósito de cada directorio y cómo se organizan los módulos:
 
 ```
 /app
-    /api             - Endpoints de la API y lógica de negocio.
-    /auth            - Autenticación y control de acceso.
-    /core            - Configuración y ajustes centrales del proyecto.
-    /models          - Modelos de la base de datos.
-    /schemas         - Esquemas Pydantic para validación de datos.
-    /services        - Lógica de negocio y servicios auxiliares.
-    /views           - Rutas y vistas para la interfaz de usuario.
-/docker             - Archivos Docker y scripts para despliegues.
-/static             - Archivos estáticos como CSS, JavaScript e imágenes.
-/templates          - Plantillas HTML para la interfaz de usuario.
+    /modules          - Contiene componentes modulares específicos del proyecto.
+        /auth         - Gestiona la autenticación y el control de acceso, incluyendo rutas y servicios necesarios.
+        /openai       - Encapsula la integración y manejo de las funcionalidades de OpenAI, como generación de texto y procesamiento de archivos.
+    /views           - Alberga las rutas y vistas para la interfaz de usuario, gestionando las respuestas y redirecciones.
+    /core            - Incluye configuraciones centrales y utilidades generales del proyecto como configuración del servidor y middleware.
+/static             - Almacena archivos estáticos necesarios para la interfaz de usuario, como CSS y JavaScript.
+/templates          - Contiene plantillas HTML para renderizar las vistas en el cliente.
+/docker             - Incluye Dockerfiles y scripts de docker-compose para facilitar el despliegue y la gestión de contenedores.
 ```
+
+### Detalle
+
+Cada módulo y directorio está diseñado para ser independiente en la medida de lo posible, permitiendo una fácil extensión y mantenimiento del código. Esta estructura modular ayuda a mantener el proyecto organizado y preparado para escalarse de manera eficiente.
 
 ## Contribuciones
 
@@ -97,4 +100,4 @@ Distribuido bajo la Licencia MIT. Ver `LICENSE` para más información.
 
 Raúl Real - [LinkedIn](https://www.linkedin.com/in/raul-real/) - rrealgo1@gmail.com
 
-URL del Proyecto: [https://github.com/yourusername/FastAPI-Project-Template](https://github.com/yourusername/FastAPI-Project-Template)
+URL del Proyecto: [https://github.com/rreal-dev/FastAPI-Project-Template](https://github.com/rreal-dev/FastAPI-Project-Template)
